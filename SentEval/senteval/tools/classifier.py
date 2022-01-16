@@ -27,7 +27,8 @@ class PyTorchClassifier(object):
         # fix seed
         np.random.seed(seed)
         torch.manual_seed(seed)
-        torch.cuda.manual_seed(seed)
+        if cudaEfficient:
+            torch.cuda.manual_seed(seed)
 
         self.inputdim = inputdim
         self.nclasses = nclasses
@@ -48,7 +49,7 @@ class PyTorchClassifier(object):
             trainX, trainy = X[trainidx], y[trainidx]
             devX, devy = X[devidx], y[devidx]
 
-        device = torch.device('cpu') if self.cudaEfficient else torch.device('cuda')
+        device = torch.device('cuda') if self.cudaEfficient else torch.device('cpu')
 
         trainX = torch.from_numpy(trainX).to(device, dtype=torch.float32)
         trainy = torch.from_numpy(trainy).to(device, dtype=torch.int64)
@@ -111,7 +112,10 @@ class PyTorchClassifier(object):
     def score(self, devX, devy):
         self.model.eval()
         correct = 0
-        if not isinstance(devX, torch.cuda.FloatTensor) or self.cudaEfficient:
+        if not self.cudaEfficient and not isinstance(devX, torch.FloatTensor):
+            devX = torch.FloatTensor(devX)
+            devy = torch.LongTensor(devy)
+        if self.cudaEfficient and not isinstance(devX, torch.cuda.FloatTensor):
             devX = torch.FloatTensor(devX).cuda()
             devy = torch.LongTensor(devy).cuda()
         with torch.no_grad():
@@ -129,7 +133,9 @@ class PyTorchClassifier(object):
 
     def predict(self, devX):
         self.model.eval()
-        if not isinstance(devX, torch.cuda.FloatTensor):
+        if not self.cudaEfficient and not isinstance(devX, torch.FloatTensor):
+            devX = torch.FloatTensor(devX)
+        if self.cudaEfficient and not isinstance(devX, torch.cuda.FloatTensor):
             devX = torch.FloatTensor(devX).cuda()
         yhat = np.array([])
         with torch.no_grad():
@@ -183,18 +189,34 @@ class MLP(PyTorchClassifier):
         self.batch_size = 64 if "batch_size" not in params else params["batch_size"]
 
         if params["nhid"] == 0:
-            self.model = nn.Sequential(
-                nn.Linear(self.inputdim, self.nclasses),
-            ).cuda()
+            if cudaEfficient:
+                self.model = nn.Sequential(
+                    nn.Linear(self.inputdim, self.nclasses),
+                ).cuda()
+            else:
+                self.model = nn.Sequential(
+                    nn.Linear(self.inputdim, self.nclasses),
+                )
         else:
-            self.model = nn.Sequential(
-                nn.Linear(self.inputdim, params["nhid"]),
-                nn.Dropout(p=self.dropout),
-                nn.Sigmoid(),
-                nn.Linear(params["nhid"], self.nclasses),
-            ).cuda()
+            if cudaEfficient:
+                self.model = nn.Sequential(
+                    nn.Linear(self.inputdim, params["nhid"]),
+                    nn.Dropout(p=self.dropout),
+                    nn.Sigmoid(),
+                    nn.Linear(params["nhid"], self.nclasses),
+                ).cuda()
+            else:
+                self.model = nn.Sequential(
+                    nn.Linear(self.inputdim, params["nhid"]),
+                    nn.Dropout(p=self.dropout),
+                    nn.Sigmoid(),
+                    nn.Linear(params["nhid"], self.nclasses),
+                )
 
-        self.loss_fn = nn.CrossEntropyLoss().cuda()
+        if cudaEfficient:
+            self.loss_fn = nn.CrossEntropyLoss().cuda()
+        else:
+            self.loss_fn = nn.CrossEntropyLoss()
         self.loss_fn.size_average = False
 
         optim_fn, optim_params = utils.get_optimizer(self.optim)
