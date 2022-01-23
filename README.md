@@ -1,38 +1,36 @@
 ## Reproducibility  for SimCSE: Simple Contrastive Learning of Sentence Embeddings (2021)
 
-This repository contains the code, prepared test notebooks and reproducibility result of [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/abs/2104.08821).
+This repository contains the code, prepared test notebooks and reproducibility result of [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://arxiv.org/abs/2104.08821). The reproducibility is done by Gökhan Güler (gulerg17@itu.edu.tr).
 
 This repository is forked from the authors' code repository. The original repository can be found here: https://github.com/princeton-nlp/SimCSE
 
-To train the model, you can use the notebook at Notebooks/Train.ipynb
+To train the model, you can use the notebook at [Notebooks/Train.ipynb](https://github.com/gokg/SimCSE/tree/main/Notebooks/Train.ipynb)
 
-To evaluate the model, you can use the notebook at Notebooks/Evaluate.ipynb
+To evaluate the model, you can use the notebook at [Notebooks/Evaluate.ipynb](https://github.com/gokg/SimCSE/tree/main/Notebooks/Evaluate.ipynb)
 
-Training results are contained at their respective notebooks at the folder Notebooks/training
+Training results are contained at their respective notebooks at the folder [Notebooks/trainings](https://github.com/gokg/SimCSE/tree/main/Notebooks/trainings)
 
-Test results are done in a local CPU, and the outputs are saved at Result folder.
+Test results are done in a local CPU, and the outputs are saved at [Results](https://github.com/gokg/SimCSE/tree/main/Results) folder.
 
 ## Model List
 
 You can use the following pre-trained models.
 
-|              Model              | Avg. STS |
-|:-------------------------------|:--------:|
-|  [princeton-nlp/unsup-simcse-bert-base-uncased](https://huggingface.co/princeton-nlp/unsup-simcse-bert-base-uncased) |   76.25 |
-| [princeton-nlp/unsup-simcse-bert-large-uncased](https://huggingface.co/princeton-nlp/unsup-simcse-bert-large-uncased) |   78.41  |
-|    [princeton-nlp/unsup-simcse-roberta-base](https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base)    |   76.57  |
-|    [princeton-nlp/unsup-simcse-roberta-large](https://huggingface.co/princeton-nlp/unsup-simcse-roberta-large)   |   78.90  |
-|   [princeton-nlp/sup-simcse-bert-base-uncased](https://huggingface.co/princeton-nlp/sup-simcse-bert-base-uncased)  |   81.57  |
-|  [princeton-nlp/sup-simcse-bert-large-uncased](https://huggingface.co/princeton-nlp/sup-simcse-bert-large-uncased)  |   82.21  |
-|     [princeton-nlp/sup-simcse-roberta-base](https://huggingface.co/princeton-nlp/sup-simcse-roberta-base)     |   82.52  |
-|     [princeton-nlp/sup-simcse-roberta-large](https://huggingface.co/princeton-nlp/sup-simcse-roberta-large)    |   83.76  |
+* [princeton-nlp/unsup-simcse-bert-base-uncased](https://huggingface.co/princeton-nlp/unsup-simcse-bert-base-uncased) 
+* [princeton-nlp/unsup-simcse-bert-large-uncased](https://huggingface.co/princeton-nlp/unsup-simcse-bert-large-uncased)  
+* [princeton-nlp/unsup-simcse-roberta-base](https://huggingface.co/princeton-nlp/unsup-simcse-roberta-base)     
+* [princeton-nlp/unsup-simcse-roberta-large](https://huggingface.co/princeton-nlp/unsup-simcse-roberta-large)    
+* [princeton-nlp/sup-simcse-bert-base-uncased](https://huggingface.co/princeton-nlp/sup-simcse-bert-base-uncased)  
+* [princeton-nlp/sup-simcse-bert-large-uncased](https://huggingface.co/princeton-nlp/sup-simcse-bert-large-uncased)
+* [princeton-nlp/sup-simcse-roberta-base](https://huggingface.co/princeton-nlp/sup-simcse-roberta-base)
+* [princeton-nlp/sup-simcse-roberta-large](https://huggingface.co/princeton-nlp/sup-simcse-roberta-large)    
 
 
 ## Evaluation
 
 **Arguments**
 
-Arguments for the evaluation script are as follows,
+Arguments for the evaluation are as follows,
 
 * `--model_name_or_path`: The name or path of a `transformers`-based pre-trained checkpoint. You can directly use the models in the above table, e.g., `princeton-nlp/sup-simcse-bert-base-uncased`.
 * `--pooler`: Pooling method. Now we support
