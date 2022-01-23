@@ -1,0 +1,118 @@
+PS D:\OneDrive - itu.edu.tr\Ders\Deep Learning\Proje\SimCSE-main> python evaluation.py --model_name_or_path princeton-nlp/sup-simcse-bert-base-uncased --pooler cls --task_set sts --mode test
+2022-01-23 14:51:30,449 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 14:51:31,093 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2022-01-23 14:51:31,099 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 14:51:31,646 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2022-01-23 14:51:33,738 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 14:51:34,329 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2022-01-23 14:51:34,336 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 14:51:34,920 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+2022-01-23 14:51:34,924 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 14:51:35,468 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/tokenizer.json HTTP/1.1" 404 0
+2022-01-23 14:51:35,473 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 14:51:36,017 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2022-01-23 14:51:36,020 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 14:51:36,567 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+2022-01-23 14:51:36,571 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 14:51:37,119 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+C:\Program Files\Python38\lib\site-packages\torch\cuda\__init__.py:52: UserWarning: CUDA initialization: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx (Triggered internally at  ..\c10\cuda\CUDAFunctions.cpp:100.)
+  return torch._C._cuda_getDeviceCount() > 0
+2022-01-23 14:51:37,323 : ***** Transfer task : STS12 *****
+
+
+./SentEval\senteval\sts.py:42: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  sent1 = np.array([s.split() for s in sent1])[not_empty_idx]
+./SentEval\senteval\sts.py:43: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  sent2 = np.array([s.split() for s in sent2])[not_empty_idx]
+2022-01-23 14:52:57,460 : MSRpar : pearson = 0.6199, spearman = 0.6253
+2022-01-23 14:53:30,911 : MSRvid : pearson = 0.9261, spearman = 0.9293
+2022-01-23 14:54:00,352 : SMTeuroparl : pearson = 0.4987, spearman = 0.5883
+2022-01-23 14:54:54,659 : surprise.OnWN : pearson = 0.7662, spearman = 0.6992
+2022-01-23 14:55:23,910 : surprise.SMTnews : pearson = 0.7292, spearman = 0.6101
+2022-01-23 14:55:23,924 : ALL : Pearson = 0.8438,             Spearman = 0.7530
+2022-01-23 14:55:23,940 : ALL (weighted average) : Pearson = 0.7252,             Spearman = 0.7091
+2022-01-23 14:55:23,941 : ALL (average) : Pearson = 0.7080,             Spearman = 0.6904
+
+2022-01-23 14:55:23,944 : ***** Transfer task : STS13 (-SMT) *****
+
+
+2022-01-23 14:55:53,758 : FNWN : pearson = 0.6293, spearman = 0.6379
+2022-01-23 14:56:35,312 : headlines : pearson = 0.8011, spearman = 0.8231
+2022-01-23 14:57:07,856 : OnWN : pearson = 0.8772, spearman = 0.8635
+2022-01-23 14:57:07,858 : ALL : Pearson = 0.8306,             Spearman = 0.8467
+2022-01-23 14:57:07,859 : ALL (weighted average) : Pearson = 0.8079,             Spearman = 0.8149
+2022-01-23 14:57:07,859 : ALL (average) : Pearson = 0.7692,             Spearman = 0.7748
+
+2022-01-23 14:57:07,862 : ***** Transfer task : STS14 *****
+
+
+2022-01-23 14:57:36,752 : deft-forum : pearson = 0.6477, spearman = 0.6436
+2022-01-23 14:58:09,343 : deft-news : pearson = 0.8242, spearman = 0.8096
+2022-01-23 14:58:52,256 : headlines : pearson = 0.7931, spearman = 0.7909
+2022-01-23 14:59:38,148 : images : pearson = 0.8937, spearman = 0.8658
+2022-01-23 15:00:22,478 : OnWN : pearson = 0.8949, spearman = 0.8752
+2022-01-23 15:01:20,806 : tweet-news : pearson = 0.8357, spearman = 0.7677
+2022-01-23 15:01:20,813 : ALL : Pearson = 0.8251,             Spearman = 0.8019
+2022-01-23 15:01:20,818 : ALL (weighted average) : Pearson = 0.8271,             Spearman = 0.8019
+2022-01-23 15:01:20,819 : ALL (average) : Pearson = 0.8149,             Spearman = 0.7921
+
+2022-01-23 15:01:20,828 : ***** Transfer task : STS15 *****
+
+
+2022-01-23 15:02:00,267 : answers-forums : pearson = 0.7454, spearman = 0.7464
+2022-01-23 15:02:44,031 : answers-students : pearson = 0.7442, spearman = 0.7512
+2022-01-23 15:03:25,248 : belief : pearson = 0.8519, spearman = 0.8722
+2022-01-23 15:04:20,128 : headlines : pearson = 0.8209, spearman = 0.8539
+2022-01-23 15:05:05,283 : images : pearson = 0.9273, spearman = 0.9372
+2022-01-23 15:05:05,300 : ALL : Pearson = 0.8428,             Spearman = 0.8540
+2022-01-23 15:05:05,301 : ALL (weighted average) : Pearson = 0.8227,             Spearman = 0.8379
+2022-01-23 15:05:05,301 : ALL (average) : Pearson = 0.8179,             Spearman = 0.8322
+
+2022-01-23 15:05:05,305 : ***** Transfer task : STS16 *****
+
+
+2022-01-23 15:05:24,041 : answer-answer : pearson = 0.7629, spearman = 0.7651
+2022-01-23 15:05:39,206 : headlines : pearson = 0.7947, spearman = 0.8354
+2022-01-23 15:05:57,327 : plagiarism : pearson = 0.8431, spearman = 0.8652
+2022-01-23 15:06:26,622 : postediting : pearson = 0.8448, spearman = 0.8863
+2022-01-23 15:06:40,655 : question-question : pearson = 0.7289, spearman = 0.7348
+2022-01-23 15:06:40,657 : ALL : Pearson = 0.7821,             Spearman = 0.8082
+2022-01-23 15:06:40,657 : ALL (weighted average) : Pearson = 0.7960,             Spearman = 0.8189
+2022-01-23 15:06:40,684 : ALL (average) : Pearson = 0.7949,             Spearman = 0.8174
+
+2022-01-23 15:06:40,719 :
+
+***** Transfer task : STSBenchmark*****
+
+
+2022-01-23 15:14:50,824 : train : pearson = 0.8365, spearman = 0.8330
+2022-01-23 15:17:12,327 : dev : pearson = 0.8569, spearman = 0.8619
+2022-01-23 15:19:08,354 : test : pearson = 0.8328, spearman = 0.8426
+2022-01-23 15:19:08,364 : ALL : Pearson = 0.8401,             Spearman = 0.8413
+2022-01-23 15:19:08,384 : ALL (weighted average) : Pearson = 0.8394,             Spearman = 0.8396
+2022-01-23 15:19:08,384 : ALL (average) : Pearson = 0.8421,             Spearman = 0.8458
+
+2022-01-23 15:19:08,400 :
+
+***** Transfer task : SICKRelatedness*****
+
+
+2022-01-23 15:24:15,299 : train : pearson = 0.8583, spearman = 0.8099
+2022-01-23 15:24:51,363 : dev : pearson = 0.8519, spearman = 0.8256
+2022-01-23 15:30:14,817 : test : pearson = 0.8512, spearman = 0.8039
+2022-01-23 15:30:14,832 : ALL : Pearson = 0.8546,             Spearman = 0.8077
+2022-01-23 15:30:14,832 : ALL (weighted average) : Pearson = 0.8545,             Spearman = 0.8077
+2022-01-23 15:30:14,833 : ALL (average) : Pearson = 0.8538,             Spearman = 0.8131
+
+------ test ------
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| 75.30 | 84.67 | 80.19 | 85.40 | 80.82 |    84.26     |      80.39      | 81.58 |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
++------+------+------+------+------+------+------+------+
+|  MR  |  CR  | SUBJ | MPQA | SST2 | TREC | MRPC | Avg. |
++------+------+------+------+------+------+------+------+
+| 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
++------+------+------+------+------+------+------+------+
+PS D:\OneDrive - itu.edu.tr\Ders\Deep Learning\Proje\SimCSE-main>

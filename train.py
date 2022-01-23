@@ -305,9 +305,9 @@ def main():
     if extension == "txt":
         extension = "text"
     if extension == "csv":
-        datasets = load_dataset(extension, data_files=data_files, cache_dir="./data/", delimiter="\t" if "tsv" in data_args.train_file else ",")
+        datasets = load_dataset(extension, data_files=data_files, cache_dir="/content/gdrive/MyDrive/SimCSE/data/", delimiter="\t" if "tsv" in data_args.train_file else ",")
     else:
-        datasets = load_dataset(extension, data_files=data_files, cache_dir="./data/")
+        datasets = load_dataset(extension, data_files=data_files, cache_dir="/content/gdrive/MyDrive/SimCSE/data/")
 
     # See more about loading any type of standard or custom dataset (from files, python dict, pandas DataFrame, etc) at
     # https://huggingface.co/docs/datasets/loading_datasets.html.

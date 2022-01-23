@@ -12,8 +12,8 @@ from transformers import AutoModel, AutoTokenizer
 logging.basicConfig(format='%(asctime)s : %(message)s', level=logging.DEBUG)
 
 # Set PATHs
-PATH_TO_SENTEVAL = './SentEval'
-PATH_TO_DATA = './SentEval/data'
+PATH_TO_SENTEVAL = '/content/gdrive/MyDrive/SimCSE/SentEval'
+PATH_TO_DATA = '/content/gdrive/MyDrive/SimCSE/SentEval/data'
 
 # Import SentEval
 sys.path.insert(0, PATH_TO_SENTEVAL)

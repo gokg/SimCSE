@@ -1,0 +1,162 @@
+PS D:\OneDrive - itu.edu.tr\Ders\Deep Learning\Proje\SimCSE-main> python evaluation.py --model_name_or_path princeton-nlp/unsup-simcse-roberta-base --pooler cls_before_pooler --task_set sts --mode fasttest
+2022-01-23 12:52:48,152 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:52:48,708 : https://huggingface.co:443 "HEAD /princeton-nlp/unsup-simcse-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+2022-01-23 12:52:48,709 : Attempting to acquire lock 2359161174816 on C:\Users\gokg/.cache\huggingface\transformers\16caecfe51555366d269b15fa7f9b680edb581ba68ecaf0f336ea86ef286bdd9.7b5e1e5cb2aaa13b3c603ef0bedc5aff70cbea4d5084a8122eb95f99e2dc20ae.lock
+2022-01-23 12:52:48,710 : Lock 2359161174816 acquired on C:\Users\gokg/.cache\huggingface\transformers\16caecfe51555366d269b15fa7f9b680edb581ba68ecaf0f336ea86ef286bdd9.7b5e1e5cb2aaa13b3c603ef0bedc5aff70cbea4d5084a8122eb95f99e2dc20ae.lock
+2022-01-23 12:52:48,712 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:52:49,262 : https://huggingface.co:443 "GET /princeton-nlp/unsup-simcse-roberta-base/resolve/main/config.json HTTP/1.1" 200 741
+Downloading: 100%|█████████████████████████████████████████████████████████████████████| 741/741 [00:00<00:00, 743kB/s]
+2022-01-23 12:52:49,267 : Attempting to release lock 2359161174816 on C:\Users\gokg/.cache\huggingface\transformers\16caecfe51555366d269b15fa7f9b680edb581ba68ecaf0f336ea86ef286bdd9.7b5e1e5cb2aaa13b3c603ef0bedc5aff70cbea4d5084a8122eb95f99e2dc20ae.lock
+2022-01-23 12:52:49,267 : Lock 2359161174816 released on C:\Users\gokg/.cache\huggingface\transformers\16caecfe51555366d269b15fa7f9b680edb581ba68ecaf0f336ea86ef286bdd9.7b5e1e5cb2aaa13b3c603ef0bedc5aff70cbea4d5084a8122eb95f99e2dc20ae.lock
+2022-01-23 12:52:49,287 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:52:49,833 : https://huggingface.co:443 "HEAD /princeton-nlp/unsup-simcse-roberta-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2022-01-23 12:52:49,836 : Attempting to acquire lock 2359161611024 on C:\Users\gokg/.cache\huggingface\transformers\2b6a4844d0abc0d39d296e23ae80eaee3e9ad84d8573ee285feb89de779af450.8fd0e7c93c9c2e11c4ba45fe2364c4db720defc2d943c94c1235a2e11e32130d.lock
+2022-01-23 12:52:49,837 : Lock 2359161611024 acquired on C:\Users\gokg/.cache\huggingface\transformers\2b6a4844d0abc0d39d296e23ae80eaee3e9ad84d8573ee285feb89de779af450.8fd0e7c93c9c2e11c4ba45fe2364c4db720defc2d943c94c1235a2e11e32130d.lock
+2022-01-23 12:52:49,838 : Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+2022-01-23 12:52:50,544 : https://cdn-lfs.huggingface.co:443 "GET /princeton-nlp/unsup-simcse-roberta-base/25ff6c2ce68194d2b5636bc19f4f5556318fbd9636ff72f332e714e976deabcf HTTP/1.1" 200 498651911
+Downloading: 100%|██████████████████████████████████████████████████████████████████| 499M/499M [00:13<00:00, 37.3MB/s]
+2022-01-23 12:53:03,915 : Attempting to release lock 2359161611024 on C:\Users\gokg/.cache\huggingface\transformers\2b6a4844d0abc0d39d296e23ae80eaee3e9ad84d8573ee285feb89de779af450.8fd0e7c93c9c2e11c4ba45fe2364c4db720defc2d943c94c1235a2e11e32130d.lock
+2022-01-23 12:53:03,915 : Lock 2359161611024 released on C:\Users\gokg/.cache\huggingface\transformers\2b6a4844d0abc0d39d296e23ae80eaee3e9ad84d8573ee285feb89de779af450.8fd0e7c93c9c2e11c4ba45fe2364c4db720defc2d943c94c1235a2e11e32130d.lock
+2022-01-23 12:53:06,117 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:06,667 : https://huggingface.co:443 "HEAD /princeton-nlp/unsup-simcse-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+2022-01-23 12:53:06,673 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:07,216 : https://huggingface.co:443 "HEAD /princeton-nlp/unsup-simcse-roberta-base/resolve/main/vocab.json HTTP/1.1" 200 0
+2022-01-23 12:53:07,219 : Attempting to acquire lock 2359317097920 on C:\Users\gokg/.cache\huggingface\transformers\1380c5819b1f64e515d5954d4a312cf7bb92d7ceb727a503fffc3d6edb96b345.bfdcc444ff249bca1a95ca170ec350b442f81804d7df3a95a2252217574121d7.lock
+2022-01-23 12:53:07,220 : Lock 2359317097920 acquired on C:\Users\gokg/.cache\huggingface\transformers\1380c5819b1f64e515d5954d4a312cf7bb92d7ceb727a503fffc3d6edb96b345.bfdcc444ff249bca1a95ca170ec350b442f81804d7df3a95a2252217574121d7.lock
+2022-01-23 12:53:07,226 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:07,778 : https://huggingface.co:443 "GET /princeton-nlp/unsup-simcse-roberta-base/resolve/main/vocab.json HTTP/1.1" 200 798293
+Downloading: 100%|███████████████████████████████████████████████████████████████████| 798k/798k [00:03<00:00, 255kB/s]
+2022-01-23 12:53:10,913 : Attempting to release lock 2359317097920 on C:\Users\gokg/.cache\huggingface\transformers\1380c5819b1f64e515d5954d4a312cf7bb92d7ceb727a503fffc3d6edb96b345.bfdcc444ff249bca1a95ca170ec350b442f81804d7df3a95a2252217574121d7.lock
+2022-01-23 12:53:10,914 : Lock 2359317097920 released on C:\Users\gokg/.cache\huggingface\transformers\1380c5819b1f64e515d5954d4a312cf7bb92d7ceb727a503fffc3d6edb96b345.bfdcc444ff249bca1a95ca170ec350b442f81804d7df3a95a2252217574121d7.lock
+2022-01-23 12:53:10,916 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:11,509 : https://huggingface.co:443 "HEAD /princeton-nlp/unsup-simcse-roberta-base/resolve/main/merges.txt HTTP/1.1" 200 0
+2022-01-23 12:53:11,510 : Attempting to acquire lock 2359317097248 on C:\Users\gokg/.cache\huggingface\transformers\71cb573abb5f991913fdb3db212b07a8f9aed4ce8fbc0e687003fcd53952e159.f5b91da9e34259b8f4d88dbc97c740667a0e8430b96314460cdb04e86d4fc435.lock
+2022-01-23 12:53:11,511 : Lock 2359317097248 acquired on C:\Users\gokg/.cache\huggingface\transformers\71cb573abb5f991913fdb3db212b07a8f9aed4ce8fbc0e687003fcd53952e159.f5b91da9e34259b8f4d88dbc97c740667a0e8430b96314460cdb04e86d4fc435.lock
+2022-01-23 12:53:11,513 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:12,064 : https://huggingface.co:443 "GET /princeton-nlp/unsup-simcse-roberta-base/resolve/main/merges.txt HTTP/1.1" 200 456356
+Downloading: 100%|███████████████████████████████████████████████████████████████████| 456k/456k [00:01<00:00, 251kB/s]
+2022-01-23 12:53:13,888 : Attempting to release lock 2359317097248 on C:\Users\gokg/.cache\huggingface\transformers\71cb573abb5f991913fdb3db212b07a8f9aed4ce8fbc0e687003fcd53952e159.f5b91da9e34259b8f4d88dbc97c740667a0e8430b96314460cdb04e86d4fc435.lock
+2022-01-23 12:53:13,889 : Lock 2359317097248 released on C:\Users\gokg/.cache\huggingface\transformers\71cb573abb5f991913fdb3db212b07a8f9aed4ce8fbc0e687003fcd53952e159.f5b91da9e34259b8f4d88dbc97c740667a0e8430b96314460cdb04e86d4fc435.lock
+2022-01-23 12:53:13,890 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:14,473 : https://huggingface.co:443 "HEAD /princeton-nlp/unsup-simcse-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 404 0
+2022-01-23 12:53:14,476 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:15,059 : https://huggingface.co:443 "HEAD /princeton-nlp/unsup-simcse-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2022-01-23 12:53:15,064 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:15,606 : https://huggingface.co:443 "HEAD /princeton-nlp/unsup-simcse-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+2022-01-23 12:53:15,609 : Attempting to acquire lock 2359316898336 on C:\Users\gokg/.cache\huggingface\transformers\3c0a48baf77dcdf61a89a92a8e79124e939c92e00b33d9bcbdfeee44392461d8.a11ebb04664c067c8fe5ef8f8068b0f721263414a26058692f7b2e4ba2a1b342.lock
+2022-01-23 12:53:15,609 : Lock 2359316898336 acquired on C:\Users\gokg/.cache\huggingface\transformers\3c0a48baf77dcdf61a89a92a8e79124e939c92e00b33d9bcbdfeee44392461d8.a11ebb04664c067c8fe5ef8f8068b0f721263414a26058692f7b2e4ba2a1b342.lock
+2022-01-23 12:53:15,611 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:16,158 : https://huggingface.co:443 "GET /princeton-nlp/unsup-simcse-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 200 239
+Downloading: 100%|█████████████████████████████████████████████████████████████████████| 239/239 [00:00<00:00, 120kB/s]
+2022-01-23 12:53:16,169 : Attempting to release lock 2359316898336 on C:\Users\gokg/.cache\huggingface\transformers\3c0a48baf77dcdf61a89a92a8e79124e939c92e00b33d9bcbdfeee44392461d8.a11ebb04664c067c8fe5ef8f8068b0f721263414a26058692f7b2e4ba2a1b342.lock
+2022-01-23 12:53:16,169 : Lock 2359316898336 released on C:\Users\gokg/.cache\huggingface\transformers\3c0a48baf77dcdf61a89a92a8e79124e939c92e00b33d9bcbdfeee44392461d8.a11ebb04664c067c8fe5ef8f8068b0f721263414a26058692f7b2e4ba2a1b342.lock
+2022-01-23 12:53:16,171 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:16,713 : https://huggingface.co:443 "HEAD /princeton-nlp/unsup-simcse-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2022-01-23 12:53:16,715 : Attempting to acquire lock 2359317134640 on C:\Users\gokg/.cache\huggingface\transformers\51f0045c000c25151fbe42f3b07fc6c9112acb6996840b5fc23c20a62075000b.7798c29a2c53e319dac80a41f69e57b26872a2c22e75a2befcea7e1469067aa2.lock
+2022-01-23 12:53:16,715 : Lock 2359317134640 acquired on C:\Users\gokg/.cache\huggingface\transformers\51f0045c000c25151fbe42f3b07fc6c9112acb6996840b5fc23c20a62075000b.7798c29a2c53e319dac80a41f69e57b26872a2c22e75a2befcea7e1469067aa2.lock
+2022-01-23 12:53:16,717 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 12:53:17,265 : https://huggingface.co:443 "GET /princeton-nlp/unsup-simcse-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 200 255
+Downloading: 100%|█████████████████████████████████████████████████████████████████████| 255/255 [00:00<00:00, 256kB/s]
+2022-01-23 12:53:17,271 : Attempting to release lock 2359317134640 on C:\Users\gokg/.cache\huggingface\transformers\51f0045c000c25151fbe42f3b07fc6c9112acb6996840b5fc23c20a62075000b.7798c29a2c53e319dac80a41f69e57b26872a2c22e75a2befcea7e1469067aa2.lock
+2022-01-23 12:53:17,272 : Lock 2359317134640 released on C:\Users\gokg/.cache\huggingface\transformers\51f0045c000c25151fbe42f3b07fc6c9112acb6996840b5fc23c20a62075000b.7798c29a2c53e319dac80a41f69e57b26872a2c22e75a2befcea7e1469067aa2.lock
+C:\Program Files\Python38\lib\site-packages\torch\cuda\__init__.py:52: UserWarning: CUDA initialization: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx (Triggered internally at  ..\c10\cuda\CUDAFunctions.cpp:100.)
+  return torch._C._cuda_getDeviceCount() > 0
+2022-01-23 12:53:17,585 : ***** Transfer task : STS12 *****
+
+
+./SentEval\senteval\sts.py:42: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  sent1 = np.array([s.split() for s in sent1])[not_empty_idx]
+./SentEval\senteval\sts.py:43: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  sent2 = np.array([s.split() for s in sent2])[not_empty_idx]
+2022-01-23 12:54:18,494 : MSRpar : pearson = 0.5772, spearman = 0.5925
+2022-01-23 12:54:46,122 : MSRvid : pearson = 0.8800, spearman = 0.8708
+2022-01-23 12:55:17,211 : SMTeuroparl : pearson = 0.5385, spearman = 0.6067
+2022-01-23 12:56:09,184 : surprise.OnWN : pearson = 0.7582, spearman = 0.7207
+2022-01-23 12:56:38,682 : surprise.SMTnews : pearson = 0.6854, spearman = 0.5932
+2022-01-23 12:56:38,686 : ALL : Pearson = 0.7686,             Spearman = 0.7015
+2022-01-23 12:56:38,686 : ALL (weighted average) : Pearson = 0.7021,             Spearman = 0.6928
+2022-01-23 12:56:38,689 : ALL (average) : Pearson = 0.6879,             Spearman = 0.6768
+
+2022-01-23 12:56:38,698 : ***** Transfer task : STS13 (-SMT) *****
+
+
+2022-01-23 12:57:06,348 : FNWN : pearson = 0.6330, spearman = 0.6470
+2022-01-23 12:57:51,454 : headlines : pearson = 0.7792, spearman = 0.7757
+2022-01-23 12:58:20,326 : OnWN : pearson = 0.8683, spearman = 0.8440
+2022-01-23 12:58:20,329 : ALL : Pearson = 0.8161,             Spearman = 0.8177
+2022-01-23 12:58:20,329 : ALL (weighted average) : Pearson = 0.7941,             Spearman = 0.7850
+2022-01-23 12:58:20,330 : ALL (average) : Pearson = 0.7602,             Spearman = 0.7556
+
+2022-01-23 12:58:20,342 : ***** Transfer task : STS14 *****
+
+
+2022-01-23 12:58:49,714 : deft-forum : pearson = 0.5496, spearman = 0.5393
+2022-01-23 12:59:24,313 : deft-news : pearson = 0.7917, spearman = 0.7360
+2022-01-23 13:00:11,682 : headlines : pearson = 0.7652, spearman = 0.7318
+2022-01-23 13:00:58,815 : images : pearson = 0.8507, spearman = 0.8156
+2022-01-23 13:01:44,324 : OnWN : pearson = 0.8783, spearman = 0.8561
+2022-01-23 13:02:49,954 : tweet-news : pearson = 0.7522, spearman = 0.6857
+2022-01-23 13:02:49,959 : ALL : Pearson = 0.7785,             Spearman = 0.7324
+2022-01-23 13:02:49,964 : ALL (weighted average) : Pearson = 0.7786,             Spearman = 0.7415
+2022-01-23 13:02:49,964 : ALL (average) : Pearson = 0.7646,             Spearman = 0.7274
+
+2022-01-23 13:02:49,974 : ***** Transfer task : STS15 *****
+
+
+2022-01-23 13:03:30,815 : answers-forums : pearson = 0.7301, spearman = 0.7357
+2022-01-23 13:04:12,668 : answers-students : pearson = 0.7393, spearman = 0.7442
+2022-01-23 13:04:57,235 : belief : pearson = 0.7963, spearman = 0.7944
+2022-01-23 13:05:54,903 : headlines : pearson = 0.8118, spearman = 0.8118
+2022-01-23 13:06:40,411 : images : pearson = 0.8800, spearman = 0.8880
+2022-01-23 13:06:40,421 : ALL : Pearson = 0.8085,             Spearman = 0.8135
+2022-01-23 13:06:40,422 : ALL (weighted average) : Pearson = 0.7986,             Spearman = 0.8023
+2022-01-23 13:06:40,426 : ALL (average) : Pearson = 0.7915,             Spearman = 0.7948
+
+2022-01-23 13:06:40,436 : ***** Transfer task : STS16 *****
+
+
+2022-01-23 13:06:57,127 : answer-answer : pearson = 0.7527, spearman = 0.7549
+2022-01-23 13:07:11,386 : headlines : pearson = 0.8024, spearman = 0.8140
+2022-01-23 13:07:28,491 : plagiarism : pearson = 0.8409, spearman = 0.8494
+2022-01-23 13:08:00,294 : postediting : pearson = 0.8462, spearman = 0.8580
+2022-01-23 13:08:13,538 : question-question : pearson = 0.7598, spearman = 0.7595
+2022-01-23 13:08:13,541 : ALL : Pearson = 0.7987,             Spearman = 0.8065
+2022-01-23 13:08:13,541 : ALL (weighted average) : Pearson = 0.8007,             Spearman = 0.8076
+2022-01-23 13:08:13,546 : ALL (average) : Pearson = 0.8004,             Spearman = 0.8071
+
+2022-01-23 13:08:13,551 :
+
+***** Transfer task : STSBenchmark*****
+
+
+2022-01-23 13:16:47,718 : train : pearson = 0.8054, spearman = 0.7777
+2022-01-23 13:19:05,907 : dev : pearson = 0.8385, spearman = 0.8391
+2022-01-23 13:21:03,613 : test : pearson = 0.8117, spearman = 0.8022
+2022-01-23 13:21:03,624 : ALL : Pearson = 0.8134,             Spearman = 0.7963
+2022-01-23 13:21:03,624 : ALL (weighted average) : Pearson = 0.8122,             Spearman = 0.7923
+2022-01-23 13:21:03,624 : ALL (average) : Pearson = 0.8186,             Spearman = 0.8063
+
+2022-01-23 13:21:03,646 :
+
+***** Transfer task : SICKRelatedness*****
+
+
+2022-01-23 13:26:04,104 : train : pearson = 0.7760, spearman = 0.6909
+2022-01-23 13:26:39,762 : dev : pearson = 0.7761, spearman = 0.7118
+2022-01-23 13:31:12,347 : test : pearson = 0.7675, spearman = 0.6856
+2022-01-23 13:31:12,353 : ALL : Pearson = 0.7718,             Spearman = 0.6893
+2022-01-23 13:31:12,353 : ALL (weighted average) : Pearson = 0.7718,             Spearman = 0.6893
+2022-01-23 13:31:12,354 : ALL (average) : Pearson = 0.7732,             Spearman = 0.6961
+
+------ fasttest ------
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| 70.15 | 81.77 | 73.24 | 81.35 | 80.65 |    80.22     |      68.56      | 76.56 |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
++------+------+------+------+------+------+------+------+
+|  MR  |  CR  | SUBJ | MPQA | SST2 | TREC | MRPC | Avg. |
++------+------+------+------+------+------+------+------+
+| 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
++------+------+------+------+------+------+------+------+
+PS D:\OneDrive - itu.edu.tr\Ders\Deep Learning\Proje\SimCSE-main>
