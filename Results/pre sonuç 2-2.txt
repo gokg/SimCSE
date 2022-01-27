@@ -1,0 +1,144 @@
+PS D:\OneDrive - itu.edu.tr\Ders\Deep Learning\Proje\SimCSE-main> python evaluation.py --model_name_or_path princeton-nlp/sup-simcse-bert-base-uncased --pooler cls --task_set transfer --mode test
+2022-01-23 17:04:42,460 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 17:04:43,010 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2022-01-23 17:04:43,015 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 17:04:43,602 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2022-01-23 17:04:45,569 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 17:04:46,119 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/config.json HTTP/1.1" 200 0
+2022-01-23 17:04:46,129 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 17:04:46,677 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/vocab.txt HTTP/1.1" 200 0
+2022-01-23 17:04:46,682 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 17:04:47,270 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/tokenizer.json HTTP/1.1" 404 0
+2022-01-23 17:04:47,273 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 17:04:47,817 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2022-01-23 17:04:47,821 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 17:04:48,372 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+2022-01-23 17:04:48,375 : Starting new HTTPS connection (1): huggingface.co:443
+2022-01-23 17:04:48,927 : https://huggingface.co:443 "HEAD /princeton-nlp/sup-simcse-bert-base-uncased/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+C:\Program Files\Python38\lib\site-packages\torch\cuda\__init__.py:52: UserWarning: CUDA initialization: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx (Triggered internally at  ..\c10\cuda\CUDAFunctions.cpp:100.)
+  return torch._C._cuda_getDeviceCount() > 0
+2022-01-23 17:04:49,087 : ***** Transfer task : MR *****
+
+
+2022-01-23 17:04:49,128 : Generating sentence embeddings
+2022-01-23 17:17:53,446 : Generated sentence embeddings
+2022-01-23 17:17:53,450 : Training pytorch-MLP-nhid0-adam-bs64 with (inner) 10-fold cross-validation
+2022-01-23 17:21:14,516 : Best param found at split 1: l2reg = 0.0001                 with score 83.78
+2022-01-23 17:24:06,004 : Best param found at split 2: l2reg = 0.0001                 with score 83.94
+2022-01-23 17:26:41,302 : Best param found at split 3: l2reg = 1e-05                 with score 83.3
+2022-01-23 17:29:25,078 : Best param found at split 4: l2reg = 0.0001                 with score 83.53
+2022-01-23 17:32:09,016 : Best param found at split 5: l2reg = 0.001                 with score 83.45
+2022-01-23 17:34:56,950 : Best param found at split 6: l2reg = 0.001                 with score 83.51
+2022-01-23 17:37:41,308 : Best param found at split 7: l2reg = 1e-05                 with score 83.64
+2022-01-23 17:40:35,086 : Best param found at split 8: l2reg = 0.0001                 with score 83.31
+2022-01-23 17:43:15,234 : Best param found at split 9: l2reg = 1e-05                 with score 83.56
+2022-01-23 17:47:39,712 : Best param found at split 10: l2reg = 0.0001                 with score 83.31
+2022-01-23 17:47:48,166 : Dev acc : 83.53 Test acc : 82.88
+
+2022-01-23 17:47:48,189 : ***** Transfer task : CR *****
+
+
+2022-01-23 17:47:48,306 : Generating sentence embeddings
+2022-01-23 17:49:43,867 : Generated sentence embeddings
+2022-01-23 17:49:43,868 : Training pytorch-MLP-nhid0-adam-bs64 with (inner) 10-fold cross-validation
+2022-01-23 17:50:34,088 : Best param found at split 1: l2reg = 0.01                 with score 90.14
+2022-01-23 17:51:26,501 : Best param found at split 2: l2reg = 1e-05                 with score 90.29
+2022-01-23 17:52:16,843 : Best param found at split 3: l2reg = 0.01                 with score 89.99
+2022-01-23 17:53:09,492 : Best param found at split 4: l2reg = 0.001                 with score 90.17
+2022-01-23 17:54:02,565 : Best param found at split 5: l2reg = 0.001                 with score 90.26
+2022-01-23 17:54:51,842 : Best param found at split 6: l2reg = 1e-05                 with score 89.82
+2022-01-23 17:55:43,853 : Best param found at split 7: l2reg = 1e-05                 with score 89.73
+2022-01-23 17:56:51,379 : Best param found at split 8: l2reg = 0.001                 with score 90.05
+2022-01-23 17:58:21,652 : Best param found at split 9: l2reg = 0.001                 with score 89.82
+2022-01-23 17:59:31,091 : Best param found at split 10: l2reg = 0.001                 with score 89.7
+2022-01-23 17:59:33,547 : Dev acc : 90.0 Test acc : 89.2
+
+2022-01-23 17:59:33,554 : ***** Transfer task : MPQA *****
+
+
+2022-01-23 17:59:33,574 : Generating sentence embeddings
+2022-01-23 18:00:57,387 : Generated sentence embeddings
+2022-01-23 18:00:57,388 : Training pytorch-MLP-nhid0-adam-bs64 with (inner) 10-fold cross-validation
+2022-01-23 18:03:32,727 : Best param found at split 1: l2reg = 1e-05                 with score 90.19
+2022-01-23 18:06:23,832 : Best param found at split 2: l2reg = 1e-05                 with score 90.12
+2022-01-23 18:09:12,487 : Best param found at split 3: l2reg = 1e-05                 with score 89.89
+2022-01-23 18:12:00,801 : Best param found at split 4: l2reg = 1e-05                 with score 90.04
+2022-01-23 18:14:49,449 : Best param found at split 5: l2reg = 1e-05                 with score 90.18
+2022-01-23 18:17:32,598 : Best param found at split 6: l2reg = 1e-05                 with score 90.06
+2022-01-23 18:20:13,990 : Best param found at split 7: l2reg = 0.001                 with score 90.18
+2022-01-23 18:22:58,721 : Best param found at split 8: l2reg = 0.0001                 with score 90.18
+2022-01-23 18:28:26,098 : Best param found at split 9: l2reg = 1e-05                 with score 90.02
+2022-01-23 18:37:56,668 : Best param found at split 10: l2reg = 1e-05                 with score 90.19
+2022-01-23 18:38:01,042 : Dev acc : 90.1 Test acc : 89.67
+
+2022-01-23 18:38:01,049 : ***** Transfer task : SUBJ *****
+
+
+2022-01-23 18:38:01,147 : Generating sentence embeddings
+2022-01-23 18:43:39,841 : Generated sentence embeddings
+2022-01-23 18:43:39,843 : Training pytorch-MLP-nhid0-adam-bs64 with (inner) 10-fold cross-validation
+2022-01-23 18:46:36,087 : Best param found at split 1: l2reg = 0.0001                 with score 95.17
+2022-01-23 18:49:40,105 : Best param found at split 2: l2reg = 1e-05                 with score 95.29
+2022-01-23 18:52:38,500 : Best param found at split 3: l2reg = 1e-05                 with score 95.28
+2022-01-23 18:55:35,001 : Best param found at split 4: l2reg = 1e-05                 with score 95.12
+2022-01-23 18:58:32,434 : Best param found at split 5: l2reg = 0.0001                 with score 95.01
+2022-01-23 19:01:33,489 : Best param found at split 6: l2reg = 0.0001                 with score 95.17
+2022-01-23 19:06:29,942 : Best param found at split 7: l2reg = 0.0001                 with score 95.3
+2022-01-23 19:16:59,319 : Best param found at split 8: l2reg = 1e-05                 with score 95.26
+2022-01-23 19:29:10,625 : Best param found at split 9: l2reg = 1e-05                 with score 95.24
+2022-01-23 19:36:44,341 : Best param found at split 10: l2reg = 1e-05                 with score 95.11
+2022-01-23 19:36:59,531 : Dev acc : 95.2 Test acc : 94.81
+
+2022-01-23 19:36:59,572 : ***** Transfer task : SST Binary classification *****
+
+
+2022-01-23 19:36:59,986 : Computing embedding for train
+2022-01-23 20:06:46,224 : Computed train embeddings
+2022-01-23 20:06:46,224 : Computing embedding for dev
+2022-01-23 20:07:15,877 : Computed dev embeddings
+2022-01-23 20:07:15,877 : Computing embedding for test
+2022-01-23 20:08:19,955 : Computed test embeddings
+2022-01-23 20:08:19,955 : Training pytorch-MLP-nhid0-adam-bs64 with standard validation..
+2022-01-23 20:09:48,127 : [('reg:1e-05', 88.07), ('reg:0.0001', 87.84), ('reg:0.001', 87.61), ('reg:0.01', 86.93)]
+2022-01-23 20:09:48,127 : Validation : best param found is reg = 1e-05 with score             88.07
+2022-01-23 20:09:48,128 : Evaluating...
+2022-01-23 20:10:10,927 :
+Dev acc : 88.07 Test acc : 87.31 for             SST Binary classification
+
+2022-01-23 20:10:10,973 : ***** Transfer task : TREC *****
+
+
+2022-01-23 20:11:51,596 : Computed train embeddings
+2022-01-23 20:11:59,345 : Computed test embeddings
+2022-01-23 20:11:59,345 : Training pytorch-MLP-nhid0-adam-bs64 with 10-fold cross-validation
+2022-01-23 20:14:14,964 : [('reg:1e-05', 83.22), ('reg:0.0001', 83.16), ('reg:0.001', 82.23), ('reg:0.01', 78.08)]
+2022-01-23 20:14:14,964 : Cross-validation : best param found is reg = 1e-05             with score 83.22
+2022-01-23 20:14:14,964 : Evaluating...
+2022-01-23 20:14:18,473 :
+Dev acc : 83.22 Test acc : 88.4             for TREC
+
+2022-01-23 20:14:18,489 : ***** Transfer task : MRPC *****
+
+
+2022-01-23 20:14:18,536 : Computing embedding for train
+2022-01-23 20:18:38,085 : Computed train embeddings
+2022-01-23 20:18:38,085 : Computing embedding for test
+2022-01-23 20:20:05,222 : Computed test embeddings
+2022-01-23 20:20:05,253 : Training pytorch-MLP-nhid0-adam-bs64 with 10-fold cross-validation
+2022-01-23 20:20:40,717 : [('reg:1e-05', 76.62), ('reg:0.0001', 76.59), ('reg:0.001', 76.52), ('reg:0.01', 76.42)]
+2022-01-23 20:20:40,717 : Cross-validation : best param found is reg = 1e-05             with score 76.62
+2022-01-23 20:20:40,717 : Evaluating...
+2022-01-23 20:20:41,859 : Dev acc : 76.62 Test acc 73.51; Test F1 80.93 for MRPC.
+
+------ test ------
++-------+-------+-------+-------+-------+--------------+-----------------+------+
+| STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness | Avg. |
++-------+-------+-------+-------+-------+--------------+-----------------+------+
+|  0.00 |  0.00 |  0.00 |  0.00 |  0.00 |     0.00     |       0.00      | 0.00 |
++-------+-------+-------+-------+-------+--------------+-----------------+------+
++-------+-------+-------+-------+-------+-------+-------+-------+
+|   MR  |   CR  |  SUBJ |  MPQA |  SST2 |  TREC |  MRPC |  Avg. |
++-------+-------+-------+-------+-------+-------+-------+-------+
+| 82.88 | 89.20 | 94.81 | 89.67 | 87.31 | 88.40 | 73.51 | 86.54 |
++-------+-------+-------+-------+-------+-------+-------+-------+
+PS D:\OneDrive - itu.edu.tr\Ders\Deep Learning\Proje\SimCSE-main>
